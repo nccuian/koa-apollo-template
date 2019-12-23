@@ -1,0 +1,5 @@
+jeancare_redis:
+  container_name: jeancare_redis
+  image: redis:5.0
+  ports:
+    - "6383:6379"

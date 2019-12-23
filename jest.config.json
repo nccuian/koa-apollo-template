@@ -1,0 +1,39 @@
+{
+  "roots": [
+    "<rootDir>/test"
+  ],
+  "transform": {
+    "^.+\\.(js|jsx|mjs)$": "<rootDir>/jest-config/jest-transformer.js"
+  },
+  "testRegex": "test/.*.spec.(js|ts|tsx)?$",
+  "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"],
+  "watchPathIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"],
+  "testPathIgnorePatterns": [
+    "<rootDir>[/\\\\](build|docs|node_modules)[/\\\\]"
+  ],
+  "moduleFileExtensions": [
+    "ts",
+    "tsx",
+    "js",
+    "jsx",
+    "node"
+  ],
+  "collectCoverageFrom": [
+    "**/*.{js,jsx}",
+    "!**/node_modules/**",
+    "!**/vendor/**",
+    "!**/test/services/**",
+    "!**/server/config/**",
+    "!**/server/db_model/**",
+    "!**/server/index.js",
+    "!**/server/scalar/**",
+    "!**/server/__tests__/**"
+  ],
+  "setupFiles": [
+    "<rootDir>/jest-config/jest.init.js"
+  ],
+  "setupFilesAfterEnv": [
+    "<rootDir>/test/beforeAll.js"
+  ]
+}
+
